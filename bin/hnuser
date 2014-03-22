@@ -6,12 +6,25 @@ var fs = require('fs');
 var lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib');
 
 if (process.argv.length < 3)
-	console.log("usage: hnuser username");
-
+{
+	console.log("usage: hnuser username [output filename]");
+	return;
+}
 
 var hnuser = require(lib+'/hnuser.js');
 hnuser.hnuser(process.argv[2], function(results)
 {
+	if (process.argv.length > 3)
+	{
+		fs.writeFile(process.argv[3], JSON.stringify(results), function(err) {
+		    if(err) {
+		        console.log(err);
+		    } else {
+		        console.log("User info stored in " + process.argv[3] + ".\n");
+		    }
+		});
+	}
+
 	results.hits = [];
 	console.log(results);
 });

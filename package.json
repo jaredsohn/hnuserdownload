@@ -10,7 +10,7 @@
   "bin": {
     "hnuser": "./bin/hnuser"
   },
-  "dependencies": { "request" },
+  "dependencies": {},
   "devDependencies": {},
   "optionalDependencies": {},
   "engines": {

@@ -1,6 +1,6 @@
 # hnuser npm module
 
-# Written by Jared Sohn (jared.sohn@gmail.com)
+Written by Jared Sohn (jared.sohn@gmail.com)
 
 Specify a username to download all comments/submissions and some statistics (such as separated comment and submission karma)
 

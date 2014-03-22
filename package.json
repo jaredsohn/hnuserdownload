@@ -1,0 +1,19 @@
+{
+  "author": "Jared Sohn",
+  "name": "hnuser",
+  "description": "Get submitted comments/stories and statistics for a user on Hacker News",
+  "version": "0.0.1",
+  "repository": {
+    "url": "http://www.github.com/jaredsohn/hnuser"
+  },
+  "main": "lib/hnuser.js",
+  "bin": {
+    "hnuser": "./bin/hnuser"
+  },
+  "dependencies": { "request" },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}

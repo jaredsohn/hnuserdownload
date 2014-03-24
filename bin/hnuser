@@ -11,18 +11,48 @@ if (process.argv.length < 3)
 	return;
 }
 
+var write_user_info = function(filename, contents)
+{
+	fs.writeFile(filename, contents, function(err) {
+		if(err) {
+		    console.log(err);
+		} else {
+		    console.log("User info stored in " + process.argv[3] + ".\n");
+		}
+	});
+}
+
 var hnuser = require(lib+'/hnuser.js');
+
+
+console.log("Getting Hacker News data for user " + process.argv[2] + "...");
+
 hnuser.hnuser(process.argv[2], function(results)
 {
 	if (process.argv.length > 3)
 	{
-		fs.writeFile(process.argv[3], JSON.stringify(results), function(err) {
-		    if(err) {
-		        console.log(err);
-		    } else {
-		        console.log("User info stored in " + process.argv[3] + ".\n");
-		    }
-		});
+		if (false) // csv
+		{
+			// Note: csv does not include computed stats
+			var json2csv = require('json2csv');
+			json2csv(
+			    {   data: results.hits, 
+			        fields: ['created_at', 'points', 'type', 'comment_text', 'story_title', 'url', 'title', 'story_url', 'story_text', 'num_comments', 'created_at_i'],  // TODO
+			        fieldNames: ['created_at', 'points', 'type', 'comment_text', 'story_title', 'url', 'title', 'story_url', 'story_text', 'num_comments', 'created_at_i']
+			    },
+			    function(err, csv) {  
+			        if (err)
+			        	console.log(err);
+			        else
+			        {
+			        	write_user_info(process.argv[3], csv);
+					}
+			    }
+			);
+		} else
+		{
+        	write_user_info(process.argv[3], JSON.stringify(results));
+		}
 	}
 
 	results.hits = [];

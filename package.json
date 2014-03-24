@@ -2,7 +2,7 @@
   "author": "Jared Sohn",
   "name": "hnuser",
   "description": "Get submitted comments/stories and statistics for a Hacker News user",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "url": "http://www.github.com/jaredsohn/hnuser"
   },

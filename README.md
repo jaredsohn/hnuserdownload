@@ -7,13 +7,13 @@ Downloads Hacker News comments/submissions and statistics for a user.  Can be us
 Install
 
 ```bash
-$ npm install hnuser
+$ npm install hnuserdownload
 ```
 
 Include the module and run
 
 ```javascript
-var hnuser = require('hnuser');
+var hnuserdownload = require('hnuserdownload');
     
 hnuser(id, function(results) {
   if (err) console.log(err);
@@ -24,7 +24,6 @@ hnuser(id, function(results) {
 ## Features
 
 * Pages through results to get all comments and stories created by a user.
-* Calculates comment and submission karma
 * Optionally stores data as JSON and CSV
 
 ## Limitations
@@ -36,25 +35,25 @@ hnuser(id, function(results) {
 ### Example
 
 ```javascript
-var hnuser = require('hnuser');
-hnuser.hnuser("pg", function(results)
+var hnuserdownload = require('hnuserdownload');
+hnuserdownload.hnuserdownload("pg", function(results)
 {
 	console.log(results);
 });
 ```
 
-There are also methods available to assist creating CSV files.
+There is also a method available to assist creating a CSV file.
 
 ## Command Line Interface
 
-`hnuser` can also be called from the command line
+`hnuserdownload` can also be called from the command line
 
 ```bash
-Usage: hnuser username [json] [csv]
+Usage: hnuserdownload username [json] [csv]
 ```
 
 
-The username is required. Include json and/or csv to create one or more output files.  The files will be named automatically based on the username.  If you choose csv, separate files will be created for the comments/stories and for the statistics.
+The username is required. Include json and/or csv to create output files.  The files will be named automatically based on the username.
       
 
 ## Other ways to use it

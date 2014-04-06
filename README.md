@@ -1,6 +1,6 @@
-# hnuser
+# hnuserdownload
 
-Downloads Hacker News comments/submissions and statistics for a user.  Can be used as a module and from the commandline.
+Downloads Hacker News comments/submissions for a user.  Can be used as a module or from the commandline.
 
 ## How to use
 
@@ -58,7 +58,7 @@ The username is required. Include json and/or csv to create output files.  The f
 
 ## Other ways to use it
 
-This library has a web frontend at [http://hnuser.herokuapp.com/].  It has a Chrome extension frontend at [http://github.com/jaredsohn/hnkarmabreakdown].
+hnuserstats (in progress) makes use of this library and includes statistics.  That library will have a web frontend at [http://hnuser.herokuapp.com/] and Chrome extension frontend at [http://github.com/jaredsohn/hnkarmabreakdown].
 
 
 ## About

@@ -1,14 +1,14 @@
 {
   "author": "Jared Sohn",
-  "name": "hnuser",
-  "description": "Get submitted comments/stories and statistics for a Hacker News user",
-  "version": "1.0.0",
+  "name": "hnuserdownload",
+  "description": "Get all comments/stories for a Hacker News user",
+  "version": "0.1.1",
   "repository": {
-    "url": "http://www.github.com/jaredsohn/hnuser"
+    "url": "http://www.github.com/jaredsohn/hnuserdownload"
   },
   "main": "lib/hnuser.js",
   "bin": {
-    "hnuser": "./bin/hnuser"
+    "hnuser": "./bin/hnuserdownload"
   },
   "dependencies": {
     "request": "^2.34.0",

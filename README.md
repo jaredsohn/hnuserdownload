@@ -15,7 +15,7 @@ Include the module and run
 ```javascript
 var hnuserdownload = require('hnuserdownload');
     
-hnuser(id, function(results) {
+hnuser(id, function(err, results) {
   if (err) console.log(err);
   console.log(csv);
 });
@@ -36,7 +36,7 @@ hnuser(id, function(results) {
 
 ```javascript
 var hnuserdownload = require('hnuserdownload');
-hnuserdownload.hnuserdownload("pg", function(results)
+hnuserdownload.hnuserdownload("pg", function(err, results)
 {
 	console.log(results);
 });

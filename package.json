@@ -2,13 +2,13 @@
   "author": "Jared Sohn",
   "name": "hnuserdownload",
   "description": "Download all comments/stories for a Hacker News user",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "repository": {
     "url": "http://www.github.com/jaredsohn/hnuserdownload"
   },
   "main": "lib/hnuserdownload.js",
   "bin": {
-    "hnuser": "./bin/hnuserdownload"
+    "hnuserdownload": "./bin/hnuserdownload"
   },
   "dependencies": {
     "request": "^2.34.0",
